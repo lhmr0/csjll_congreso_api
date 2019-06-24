@@ -1,0 +1,19 @@
+CREATE TABLE `usuarios` (
+  `dni_usuario` varchar(8) NOT NULL,
+  `apellido_usuario` varchar(60) NOT NULL,
+  `nombre_usuario` varchar(60) NOT NULL,
+  `perfil_usuario` varchar(40) NOT NULL,
+  `telefono_usuario` varchar(11) NOT NULL,
+  `trabajo_usuario` varchar(45) NOT NULL,
+  `correo_usuario` varchar(60) NOT NULL,
+  PRIMARY KEY (`dni_usuario`),
+  UNIQUE KEY `dni_usuario_UNIQUE` (`dni_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `asistencias` (
+  `id_asistencias` int(11) NOT NULL AUTO_INCREMENT,
+  `dni_usuario` varchar(8) NOT NULL,
+  `hora` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_asistencias`,`dni_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
